@@ -25,12 +25,18 @@ public class Customer extends Person {
         purchaseList.add(product);
     }
 
-    public void findProductOnMarket(Market market){
-        for (Product product: getExpectedPurchaseList()){
-            for (Seller seller: market.getSellers()){
+    public void findProductOnMarket(Market market, String name, String surname) {
+        for (Product product : getExpectedPurchaseList()) {
+            for (Seller seller : market.getSellers()) {
                 boolean isBought = seller.sellProducts(this, product);
-                if(isBought){
-                    break;
+                if (seller.getName().equals(name) & seller.getLastName().equals(surname)) {
+                    if (isBought) {
+                        break;
+                    } else {
+                        continue;
+                    }
+                } if (isBought) {
+                        break;
                 }
             }
         }
