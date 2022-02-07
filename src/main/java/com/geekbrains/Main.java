@@ -17,7 +17,7 @@ public class Main {
         market.addSeller(firstSeller);
         market.addSeller(secondSeller);
         Customer customer = createFirstCustomer();
-        customer.findProductOnMarket(market);
+        customer.findProductOnMarket(market, "Виталий", "Еремин");
         customer.info();
     }
 
@@ -42,12 +42,12 @@ public class Main {
             Product firstProduct = new Product();
             firstProduct.setName(MarketConstants.TOMATOES_PRODUCT_NAME);
             firstProduct.setPrice(10);
-            firstProduct.setQuantity(4);
+            firstProduct.setQuantity(30);
 
             Product secondProduct = new Product();
             secondProduct.setName(MarketConstants.CUCUMBERS_PRODUCT_NAME);
-            secondProduct.setPrice(8);
-            secondProduct.setQuantity(100);
+            secondProduct.setPrice(5);
+            secondProduct.setQuantity(10);
 
             List<Product> products = new ArrayList<>();
             products.add(firstProduct);
@@ -66,12 +66,12 @@ public class Main {
             Product firstProduct = new Product();
             firstProduct.setName(MarketConstants.TOMATOES_PRODUCT_NAME);
             firstProduct.setPrice(8);
-            firstProduct.setQuantity(40);
+            firstProduct.setQuantity(1);
 
             Product secondProduct = new Product();
             secondProduct.setName(MarketConstants.CUCUMBERS_PRODUCT_NAME);
             secondProduct.setPrice(5);
-            secondProduct.setQuantity(12);
+            secondProduct.setQuantity(1);
 
             List<Product> products = new ArrayList<>();
             products.add(firstProduct);
